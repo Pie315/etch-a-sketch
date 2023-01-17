@@ -31,3 +31,5 @@ function nuke() {
         container.removeChild(container.firstChild);
     }
 }
+
+document.querySelector(".inputs").addEventListener("click", () => makeGrid(100));
