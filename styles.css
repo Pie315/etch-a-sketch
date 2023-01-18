@@ -1,3 +1,5 @@
+
+
 .container {
     height: 90vh;
     width: 90vh;
@@ -6,12 +8,14 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 2px;
+    border: 2px solid black;
 }
 
 body {
     margin: 0;
     background-color: rgb(42, 31, 31);
     color: white;
+    font-family: 'Playfair Display', serif;
 }
 
 .page {
@@ -28,7 +32,7 @@ body {
 }
 
 .pixel {
-    background-color: white;
+    background-color: rgb(42, 31, 31);
     flex-grow: 1;
     margin: 0;
     padding: 0;
@@ -48,4 +52,34 @@ body {
 
 .hovered {
     background-color: orange;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.nukeButton {
+    background-color: rgb(7, 150, 62);
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 5px solid black;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    border-radius: 15px;
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+}
+
+.sliderVal {
+    font-size: 20px;
+    text-align: center;
 }
