@@ -1,7 +1,10 @@
 let container = document.querySelector(".container");
+let color = 50;
 
 function hover(element) {
     element.classList.add("hovered");
+    //element.style.color = `hsl(${color}, 100%, 50%)`;
+    //console.log(element.style.color);
 }
 
 function makeRow(rows) {
@@ -23,7 +26,6 @@ function makeGrid(dimension) {
     for (let i = 0; i < dimension; i++) {
         container.appendChild(makeRow(dimension));
     }
-    console.log(container);
 }
 
 function nuke() {
@@ -32,4 +34,17 @@ function nuke() {
     }
 }
 
-document.querySelector(".inputs").addEventListener("click", () => makeGrid(100));
+function updateVal () {
+    value.textContent = `${(slider.value)**2} tiles created`;
+    makeGrid(slider.value);
+}
+
+let slider = document.querySelector(".slider");
+slider.addEventListener("input", () => updateVal());
+
+let value = document.querySelector(".sliderVal");
+
+let nukeButton = document.querySelector(".nukeButton");
+
+nukeButton.addEventListener("click", () => nuke());
+
